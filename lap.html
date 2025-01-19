@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lap</title>
+    <link rel="stylesheet" href="index.css">
+    <SCript src="index.js"></SCript>
+    <header>
+        <div class="logo">
+            <!-- Logo Image -->
+            <img src="new.png" alt="Somalia Prayer Reminder Logo" id="logo">
+            <h1>Somalia Prayer Reminder</h1>
+        </div>
+    </header>
+    <body>
+        <!-- Navigation Bar --> 
+         <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="index.html">Prayer Times</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="about us.html">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="contac.html">Contact</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+           
+                <li>
+                    
+                    <a href="#">chapters</a>
+                    <ul class="drowpdown">
+                        <li><a href="chapter1.html">chapt1</a></li>
+                        <li><a href="chapter2.html">chapt2</a></li>
+                        <li><a href="chapter3.html">chapt3</a></li>
+                        <li> <a href="chapter4.html">chapt4</a></li>
+                        <li> <a href="chapter5.html">chapt5</a></li>
+                        <li><a href="chapter6.html">chapt6</a></li>
+                        <li><a href="chapter7.html">chapt7</a></li>
+                        <li><a href="chapter8.html">chapt8</a></li>
+                    </ul>
+                </li>
+        
+               <li><a href="lab.html">lap</a></li> &nbsp;&nbsp;&nbsp;&nbsp;
+               <li> <a href="assignmrnt.html">Assigments</a>
+               
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li> <a href="about us.html">about</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="nchapters.html">N chapters</a><li>
+            
+               
+                
+            
+        </ul>
+        
+    </div>
+    <style>
+        .calculator {
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            display: none; /* Initially hide the calculator */
+        }
+
+        .display {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .styled-button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button class="styled-button" onclick="nows()">Lap 1: Ali's Names</button>
+        <button class="styled-button" onclick="hi()">Lap 2: Time Display</button>
+        <button class="styled-button" onclick="showCalculator()">Lap 3: Calculator</button>
+    </div>
+
+    <div id="output" style="margin-top: 20px;">
+        <!-- Output from the JavaScript functions will be shown here -->
+    </div>
+
+    <div id="calculator" class="calculator">
+        <div>
+            <input type="text" class="display" id="display" disabled>
+            <div class="buttons">
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="setOperator('/')">/</button>
+
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="setOperator('*')">*</button>
+
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="setOperator('-')">-</button>
+
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendNumber('.')">.</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="setOperator('+')">+</button>
+
+                <button onclick="calculate()" class="equal">=</button>
+            </div>
+        </div>
+    </div>
+
+  
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h3>Somali Prayer Reminder</h3>
+            <p>Ku xidhnow si aad u hesho xog cusub oo ku saabsan waqtiga salaada iyo xusuusinno.</p>
+            
+            <!-- Social Media Links with Icons -->
+            
+            
+        <div class="footer-bottom">
+            <p>&copy; 2025 Somali Prayer Reminder. Dhamaan xuquuqda way xafidan yihiin.</p>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

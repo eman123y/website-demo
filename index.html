@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home- Somalia Prayer Reminder</title>
+    <link rel="stylesheet" href="index.css ">
+</head>
+<header>
+    <div class="logo">
+        <!-- Logo Image -->
+        <img src="new.png" alt="Somalia Prayer Reminder Logo" id="logo">
+        <h1 class="cde">Somalia Prayer Reminder</h1>
+    </div> 
+</header>
+<body>
+
+    <!-- Navigation Bar --> 
+     <div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+           <li><a href="index.html">Prayer Times</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+           <li><a href="about us.html">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+           <li><a href="contac.html">Contact</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+       
+            <li>
+                
+                <a href="#">chapters</a>
+                <ul class="drowpdown">
+                    <li><a href="chapt1.html">chapt1</a></li>
+                    <li><a href="chapt2.html">chapt2</a></li>
+                    <li><a href="chapt3.html">chapt3</a></li>
+                    <li> <a href="chapt4.html">chapt4</a></li>
+                    <li> <a href="chapt5.html">chapt5</a></li>
+                    <li><a href="chapt6.html">chapt6</a></li>
+                    <li><a href="chapt7.html">chapt7</a></li>
+                    <li><a href="chapt8.html">chapt8</a></li>
+                </ul>
+            </li>
+    
+           <li><a href="lap.html">lap</a></li> &nbsp;&nbsp;&nbsp;&nbsp;
+           <li> <a href="#">Assigments</a>
+            <ul class="drowpdown">
+                <li><a href="Assigment1.html">Assigmen 1</a></li>
+                <li><a href="Assigment2.html">Assigmen 2</a></li>
+            </ul>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+           <li> <a href="aboutme.html">about</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+           <li><a href="nchapters.html">N chapters</a></li>
+        
+           
+            
+        
+    </ul>
+    
+</div>
+    <center>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Select Region for Prayer Times</h2>
+        
+        <!-- Region Selection Dropdown -->
+        <label for="region" id>Select Region:</label>
+        <select id="region">
+            <option value=""></option>
+            <option value="Mogadishu">Banaadir (Mogadishu)</option>
+            <option value="Awdal">Awdal</option>
+            <option value="Bari">Bari</option>
+            <option value="Bay">Bay</option>
+            <option value="Bakool">Bakool</option>
+            <option value="Galguduud">Galguduud</option>
+            <option value="Gedo">Gedo</option>
+            <option value="Hiiraan">Hiiraan</option>
+            <option value="JubbaHoose">Jubbada Hoose</option>
+            <option value="JubbaDhexe">Jubbada Dhexe</option>
+            <option value="Mudug">Mudug</option>
+            <option value="Nugaal">Nugaal</option>
+            <option value="Sool">Sool</option>
+            <option value="Sanaag">Sanaag</option>
+            <option value="ShabeellahaHoose">Shabeellaha Hoose</option>
+            <option value="ShabeellahaDhexe">Shabeellaha Dhexe</option>
+            <option value="Togdheer">Togdheer</option>
+            <option value="WoqooyiGalbeed">Woqooyi Galbeed</option>
+            <!-- Add other regions as needed -->
+        </select>
+
+        <!-- Display Prayer Times -->
+        <div id="prayer-times">
+            <p  id="fajr"></p>
+            <p id="dhuhr"></p>
+            <p id="asr"></p>
+            <p id="maghrib"></p>
+            <p id="isha"></p>
+            <p id="duha"></p>
+            <p id="layl"></p>
+        </div>
+
+    </div><br><br><br><br>
+    
+
+    <!-- Audio element for sound -->
+    <audio id="prayerSound" src="salat.mp3" preload="auto"></audio>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Somali Prayer Reminder</h3>
+                <p>Ku xidhnow si aad u hesho xog cusub oo ku saabsan waqtiga salaada iyo xusuusinno.</p>
+                
+                <!-- Social Media Links with Icons -->
+                
+                
+            <div class="footer-bottom">
+                <p >&copy; 2025 Somali Prayer Reminder. Dhamaan xuquuqda way xafidan yihiin.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

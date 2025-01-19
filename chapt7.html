@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chpt7- Somalia Prayer Reminder</title>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<header>
+    <div class="logo">
+        <!-- Logo Image -->
+        <img src="new.png" alt="Somalia Prayer Reminder Logo" id="logo">
+        <h1>Somalia Prayer Reminder</h1>
+    </div>
+</header>
+<body>
+    <!-- <header class="header">
+        <h1>Assignment</h1>
+    </header> -->
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="index.html">Prayer Times</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="about us.html">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="contac.html">Contact</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+           
+                <li>
+                    
+                    <a href="#">chapters</a>
+                    <ul class="drowpdown">
+                        <li><a href="chapt1.html">chapt1</a></li>
+                        <li><a href="chapt2.html">chapt2</a></li>
+                        <li><a href="chapt3.html">chapt3</a></li>
+                        <li> <a href="chapt4.html">chapt4</a></li>
+                        <li> <a href="chapt5.html">chapt5</a></li>
+                        <li><a href="chapt6.html">chapt6</a></li>
+                        <li><a href="chapt7.html">chapt7</a></li>
+                        <li><a href="chapt8.html">chapt8</a></li>
+                    </ul>
+                </li>
+        
+               <li><a href="lap.html">lap</a></li> &nbsp;&nbsp;&nbsp;&nbsp;
+               <li> <a href="#">Assigments</a>
+                <ul class="drowpdown">
+                    <li><a href="Assigment1.html">Assigmen 1</a></li>
+                    <li><a href="Assigment2.html">Assigmen 2</a></li>
+                </ul>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li> <a href="aboutme.html">about Me</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+               <li><a href="nchapters.html">N chapters</a></li>
+                
+            
+            
+            
+        </ul>
+        
+    </div>
+   <center>
+    <div class="container">
+        
+
+        <!-- Event Listener -->
+        <button id="myButton">Click Me!</button><br><br>
+
+        <!-- Inline Event Handler -->
+        <button onclick="func()">click me 2</button><br><br>
+    
+
+
+    <!-- Mouse Events -->
+     <div id="myel">Hover Over Me</div><br><br>
+
+
+     <!-- keyboard events -->
+    <input type="text" id="text" placeholder="Type Something">
+    <div id="output"></div><br><br>
+
+
+    <!-- Focus events -->
+    <input type="text" id="text2" placeholder="Type Something">
+    <div id="output2"></div><br><br>
+
+
+    <!-- focus element -->
+     <form id="myform">
+        <input type="text" id="textinp" placeholder="Type Something">
+        <button type="submit">Submit</button>
+     </form>
+     <div id="foutput"></div>
+
+   
+     <ul id="parentList">
+        <li class="li">Item 1</li>&nbsp;&nbsp;&nbsp;
+        <li class="li">Item 2</li>&nbsp;&nbsp;&nbsp;
+        <li class="li">Item 3</li>&nbsp;&nbsp;&nbsp;
+        <li class="li">Item 4</li>&nbsp;&nbsp;&nbsp;
+</ul>
+</div>
+<br><br>
+<script>
+    const element = document.getElementById("myButton");
+element.addEventListener("click", myfun);
+function myfun(){
+alert("Button Clicked!")
+}
+ 
+
+// inline event handler
+function func(){
+alert("Button Clicked!")
+}
+
+
+// mouse event
+let element2 = document.getElementById("myel");
+element2.addEventListener("mouseover",function(){
+element2.style.backgroundColor = "green";
+});
+element2.addEventListener("mouseout",function(){
+element2.style.backgroundColor = "blue";
+});
+
+
+//keyboard event
+const textinput = document.getElementById("text");
+const outputdiv = document.getElementById("output");
+textinput.addEventListener("keydown", function (event){
+outputdiv.innerText = `Keydown: ${event.key}`;
+});
+textinput.addEventListener("keypress", function (event){
+outputdiv.innerText += `\nKeypress: ${event.key}`;
+});
+textinput.addEventListener("keyup", function (event){
+outputdiv.innerText += `\nKeyup: ${event.key}`;
+});
+
+
+//Focus events
+const textinput2 = document.getElementById("text2");
+        const outputdiv2 = document.getElementById("outPut2");
+
+        textinput2.addEventListener("focus", function () {
+            updateOutput("Element focused!", "focused");
+        });
+
+        textinput.addEventListener("blur", function () {
+            updateOutput("Element blurred!", "blurred");
+        });
+// const textinput2 = document.getElementById("text2");
+// const outputdiv2 = document.getElementById("output2");
+// textinput2.addEventListener("focus", function (){
+// updateOutput("focused");
+// });
+// textinput2.addEventListener("blur", function (){
+// updateOutput("blurred");
+// });
+// function updateOutput(className){
+// outputdiv2.className = className;
+// }
+
+
+//form focus
+const textinp = document.getElementById("textinp");
+const outdiv = document.getElementById("foutput");
+const form = document.getElementById("myform");
+textinp.addEventListener("input", function () {
+if (textinp.value != "") {
+    updateOutput2("input changed!", "valid");
+} else {
+    updateOutput2("input changed with empty!", "invalid");
+}
+});
+form.addEventListener("submit", function (event) {
+event.preventDefault();
+updateOutput2("form submitted!", "valid");
+});
+function updateOutput2(message2, classname2) {
+outdiv.innerText = message2;
+outdiv.className = classname2;
+}
+
+
+//Event Delegation Using A Single Event Listener On The Parent Element
+const parentList = document.getElementById("parentList");
+parentList.addEventListener("click", function(event){
+if(event.target.tagName === "LI"){
+    alert("Clicked on: "+event.target.innerText);
+}
+});
+
+// Function to toggle the menu visibility on mobile screens
+function toggleMenu() {
+const navLinks = document.querySelector('.nav-links');
+navLinks.classList.toggle('active');
+}
+
+</script>
+</header>
+<!-- footer bar -->
+<!-- <footer class="footer">
+    <p>iman Adam &copy; 2024</p>
+</footer> -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h3>Somali Prayer Reminder</h3>
+            <p>Ku xidhnow si aad u hesho xog cusub oo ku saabsan waqtiga salaada iyo xusuusinno.</p>
+            
+            <!-- Social Media Links with Icons -->
+            
+            
+        <div class="footer-bottom">
+            <p>&copy; 2025 Somali Prayer Reminder. Dhamaan xuquuqda way xafidan yihiin.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>
